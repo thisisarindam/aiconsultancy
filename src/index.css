@@ -145,6 +145,12 @@ html.light .text-white,
 html.light .hover\:text-white:hover {
   color: #0f172a !important; /* Slate-900 */
 }
+html.light .text-white\/\[0\.02\] {
+  color: rgba(0, 0, 0, 0.03) !important;
+}
+html.light .text-gray-200 {
+  color: #1e293b !important; /* Slate-800 */
+}
 html.light .text-gray-400 {
   color: #475569 !important; /* Slate-600 */
 }
@@ -182,6 +188,13 @@ html.light .bg-black\/70 {
   -webkit-backdrop-filter: blur(12px) !important;
 }
 html.light .bg-black\/95 { background-color: rgba(255, 255, 255, 0.95) !important; }
+
+html.light .bg-gray-600 {
+  background-color: #cbd5e1 !important; /* Slate-300 */
+}
+html.light .hover\:bg-gray-500:hover {
+  background-color: #94a3b8 !important; /* Slate-400 */
+}
 
 /* Navbar text specifically in light mode */
 html.light nav .text-gray-300,
