@@ -56,37 +56,17 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  const next = useCallback(() => {
-    setDirection(1);
-    setCurrent((prev) => (prev + 1) % testimonials.length);
-  }, []);
-
-  const prev = useCallback(() => {
-    setDirection(-1);
-    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  }, []);
-
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(next, 6000);
-    return () => clearInterval(timer);
-  }, [next, isPaused]);
-
-  const t = testimonials[current];
+  // Duplicate testimonials for seamless infinite scroll
+  const scrollItems = [...testimonials, ...testimonials];
 
   return (
-    <section className="relative py-20 sm:py-24 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative py-20 sm:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-14 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 sm:mb-14"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/20 bg-pink-500/5 text-pink-400 text-xs sm:text-sm mb-6">
             <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" />
@@ -97,89 +77,46 @@ export default function Testimonials() {
             <span className="gradient-text">Industry Leaders</span>
           </h2>
         </motion.div>
+      </div>
 
-        {/* Testimonial card */}
-        <div
-          className="card-border glow-cyan"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => setIsPaused(false)}
-        >
-          <div className="card-inner p-6 sm:p-10 relative overflow-hidden">
-            <Quote className="absolute top-6 right-6 w-16 sm:w-20 h-16 sm:h-20 text-white/[0.02]" />
+      <div className="relative flex overflow-hidden group pb-8">
+        {/* Left and Right fade overlays for smooth enter/exit */}
+        <div className="absolute left-0 top-0 w-16 sm:w-32 h-full bg-gradient-to-r from-[#0a0a0f] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 w-16 sm:w-32 h-full bg-gradient-to-l from-[#0a0a0f] to-transparent z-10 pointer-events-none" />
 
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.div
-                key={current}
-                custom={direction}
-                initial={{ opacity: 0, x: direction * 60 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -direction * 60 }}
-                transition={{ duration: 0.4 }}
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4 sm:mb-6">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
+        <div className="flex animate-marquee w-max gap-4 sm:gap-6 px-4">
+          {scrollItems.map((t, i) => (
+            <div key={i} className="w-[300px] sm:w-[400px] shrink-0 card-border glow-cyan flex flex-col">
+              <div className="card-inner p-6 sm:p-8 relative flex-grow flex flex-col h-full hover:bg-white/[0.04] transition-colors">
+                <Quote className="absolute top-4 right-4 w-10 sm:w-12 h-10 sm:h-12 text-white/[0.03]" />
+                
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: t.rating }).map((_, j) => (
+                    <Star key={j} className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
 
-                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-6 sm:mb-8">
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 flex-grow">
                   "{t.content}"
                 </p>
 
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 flex-wrap">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
                   <div className="flex items-center gap-3">
-                    <div
-                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${t.color} flex items-center justify-center text-white font-bold text-sm`}
-                    >
+                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${t.color} flex items-center justify-center text-white font-bold text-sm shrink-0`}>
                       {t.avatar}
                     </div>
-                    <div>
-                      <div className="text-white font-semibold text-sm sm:text-base">{t.name}</div>
-                      <div className="text-xs sm:text-sm text-gray-500">{t.role}</div>
+                    <div className="min-w-0">
+                      <div className="text-white font-semibold text-sm truncate">{t.name}</div>
+                      <div className="text-xs text-gray-500 truncate">{t.role}</div>
                     </div>
                   </div>
-                  <div className="px-3 sm:px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20">
-                    <span className="text-green-400 text-xs sm:text-sm font-semibold">{t.savings}</span>
+                  <div className="px-2 py-1 rounded-md bg-green-500/10 border border-green-500/20 shrink-0 self-start sm:self-auto">
+                    <span className="text-green-400 text-xs font-semibold whitespace-nowrap">{t.savings.split('/')[0]}</span>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Nav arrows */}
-            <div className="flex justify-center gap-3 mt-6 sm:mt-8">
-              <button
-                onClick={prev}
-                className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 active:scale-90 transition-all"
-              >
-                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
-              </button>
-              <button
-                onClick={next}
-                className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 active:scale-90 transition-all"
-              >
-                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
-              </button>
+              </div>
             </div>
-
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-3 sm:mt-4">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => {
-                    setDirection(i > current ? 1 : -1);
-                    setCurrent(i);
-                  }}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i === current ? "bg-indigo-500 w-6" : "bg-gray-600 hover:bg-gray-500 w-2"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
