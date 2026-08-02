@@ -1,10 +1,29 @@
 import { Sparkles } from "lucide-react";
 import { FaLinkedin, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const footerLinks = {
-  Services: ["AI Opportunity Audit", "Workflow Automation", "AI Chatbots", "Document AI", "Analytics & Reporting", "Staff Training"],
-  Company: ["About Us", "Case Studies", "Careers", "Blog", "Partner Program"],
-  Legal: ["Privacy Policy", "Terms of Service", "Data Processing", "Cookie Policy"],
+  Services: [
+    { name: "AI Opportunity Audit", href: "/#services" },
+    { name: "Workflow Automation", href: "/#services" },
+    { name: "AI Chatbots", href: "/#services" },
+    { name: "Document AI", href: "/#services" },
+    { name: "Analytics & Reporting", href: "/#services" },
+    { name: "Staff Training", href: "/#services" }
+  ],
+  Company: [
+    { name: "About Us", href: "/#about" },
+    { name: "Case Studies", href: "/#demos" },
+    { name: "Careers", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Partner Program", href: "#" }
+  ],
+  Legal: [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Data Processing", href: "#" },
+    { name: "Cookie Policy", href: "/cookies" }
+  ],
 };
 
 export default function Footer() {
@@ -14,7 +33,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-2">
-            <a href="#" className="flex items-center mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
@@ -25,7 +44,7 @@ export default function Footer() {
                 </span>
                 <span className="text-[10px] text-gray-400 tracking-[0.1em] uppercase mt-0.5">Intelligence in operation.</span>
               </div>
-            </a>
+            </Link>
             <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 max-w-xs">
               Transforming businesses through intelligent AI automation. We find bottlenecks, build solutions, and train teams — all at a fraction of traditional consulting costs.
             </p>
@@ -53,13 +72,22 @@ export default function Footer() {
               <h4 className="text-white text-xs sm:text-sm font-semibold mb-3 sm:mb-4">{title}</h4>
               <ul className="space-y-2 sm:space-y-2.5">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-gray-500 text-xs sm:text-sm hover:text-gray-300 transition-colors"
-                    >
-                      {link}
-                    </a>
+                  <li key={link.name}>
+                    {link.href.startsWith("/") ? (
+                      <Link
+                        to={link.href}
+                        className="text-gray-500 text-xs sm:text-sm hover:text-gray-300 transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-gray-500 text-xs sm:text-sm hover:text-gray-300 transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
