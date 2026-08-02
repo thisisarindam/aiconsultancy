@@ -54,10 +54,10 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col ml-3">
               <span className="text-xl font-bold tracking-wider leading-none">
-                <span className="text-white">AX</span>
-                <span className="gradient-text">IOM</span>
+                <span className="text-white">MO</span>
+                <span className="gradient-text">DUS</span>
               </span>
-              <span className="text-[10px] text-gray-400 tracking-[0.2em] uppercase mt-0.5">intelligence, distilled.</span>
+              <span className="text-[10px] text-gray-400 tracking-[0.1em] uppercase mt-0.5">Intelligence in operation.</span>
             </div>
           </motion.a>
 

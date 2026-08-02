@@ -20,10 +20,10 @@ export default function Footer() {
               </div>
               <div className="flex flex-col ml-3">
                 <span className="text-xl font-bold tracking-wider leading-none">
-                  <span className="text-white">AX</span>
-                  <span className="gradient-text">IOM</span>
+                  <span className="text-white">MO</span>
+                  <span className="gradient-text">DUS</span>
                 </span>
-                <span className="text-[10px] text-gray-400 tracking-[0.2em] uppercase mt-0.5">intelligence, distilled.</span>
+                <span className="text-[10px] text-gray-400 tracking-[0.1em] uppercase mt-0.5">Intelligence in operation.</span>
               </div>
             </a>
             <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 max-w-xs">
@@ -70,7 +70,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-gray-600 text-[10px] sm:text-xs">
-            &copy; {new Date().getFullYear()} AXIOM. All rights reserved. Built with ❤️ for businesses ready to automate.
+            &copy; {new Date().getFullYear()} MODUS. All rights reserved. Built with ❤️ for businesses ready to automate.
           </p>
           <p className="text-gray-600 text-[10px] sm:text-xs">
             Made in Bengaluru, India • Serving clients worldwide
