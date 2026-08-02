@@ -9,6 +9,7 @@ export default function Contact() {
     email: "",
     company: "",
     message: "",
+    idea: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -18,7 +19,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    setFormData({ name: "", email: "", company: "", message: "" });
+    setFormData({ name: "", email: "", company: "", message: "", idea: "" });
   };
 
   return (
@@ -129,6 +130,19 @@ export default function Contact() {
                       onChange={handleChange}
                       rows={4}
                       placeholder="Tell us about your current processes, bottlenecks, and what you'd like to automate..."
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm placeholder-gray-600 focus:border-indigo-500/50 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition resize-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs sm:text-sm text-gray-400 mb-2">
+                      Any ideas on the possible problem or solution? (Optional)
+                    </label>
+                    <textarea
+                      name="idea"
+                      value={formData.idea}
+                      onChange={handleChange}
+                      rows={4}
+                      placeholder="If you have any idea about what could be the possible problem or solution, let us know here..."
                       className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm placeholder-gray-600 focus:border-indigo-500/50 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition resize-none"
                     />
                   </div>
