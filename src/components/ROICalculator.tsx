@@ -156,7 +156,7 @@ export default function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-3 sm:space-y-4 lg:space-y-0 lg:h-full lg:flex lg:flex-col lg:justify-between"
+            className="flex flex-col gap-4 sm:gap-5 lg:h-full lg:justify-between"
           >
             {/* Annual Savings */}
             <motion.div
