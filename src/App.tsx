@@ -12,6 +12,7 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,6 +37,7 @@ export default function App() {
         <FAQ />
         <Contact />
       </main>
+      <ThemeToggle />
       <Footer />
     </div>
   );
