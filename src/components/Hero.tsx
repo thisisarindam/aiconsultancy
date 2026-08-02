@@ -100,9 +100,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mb-6"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight flex flex-nowrap items-baseline justify-center gap-x-3 whitespace-nowrap">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight flex flex-col items-center justify-center gap-y-2 whitespace-nowrap">
             <span className="text-white">Automate Your</span>
-            <span className="gradient-text inline-block text-left">
+            <span className="gradient-text inline-block text-center">
               <span className="inline-block">{typedWord}</span>
               <span className="animate-blink text-indigo-400 font-light ml-0.5">|</span>
             </span>
