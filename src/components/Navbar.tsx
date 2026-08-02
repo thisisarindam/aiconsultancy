@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
 
 const navLinks = [
   { label: "Services", href: "/#services" },
@@ -48,9 +49,7 @@ export default function Navbar() {
             to="/"
             className="flex items-center group"
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-indigo-500/40 transition-all duration-300">
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-            </div>
+            <Logo className="w-8 h-8 sm:w-9 sm:h-9 drop-shadow-lg transition-transform duration-300 group-hover:scale-110" />
             <div className="flex flex-col ml-3">
               <span className="text-xl font-bold tracking-wider leading-none">
                 <span className="text-white">MO</span>

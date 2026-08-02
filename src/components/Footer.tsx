@@ -1,6 +1,7 @@
-import { Sparkles } from "lucide-react";
+
 import { FaLinkedin, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
 
 const footerLinks = {
   Services: [
@@ -33,10 +34,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-2">
-            <Link to="/" className="flex items-center mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
+            <Link to="/" className="flex items-center mb-4 group">
+              <Logo className="w-9 h-9 drop-shadow-lg transition-transform duration-300 group-hover:scale-110" />
               <div className="flex flex-col ml-3">
                 <span className="text-xl font-bold tracking-wider leading-none">
                   <span className="text-white">MO</span>
