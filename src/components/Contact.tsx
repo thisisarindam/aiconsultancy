@@ -135,7 +135,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label className="block text-xs sm:text-sm text-gray-400 mb-2">
-                      Any ideas on the possible problem or solution? (Optional)
+                      Any idea you have in mind? (Optional)
                     </label>
                     <textarea
                       name="idea"
