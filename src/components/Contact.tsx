@@ -169,44 +169,84 @@ export default function Contact() {
             className="lg:col-span-2 flex flex-col gap-3 sm:gap-4 lg:h-full lg:justify-between"
           >
             <motion.div
-              className="card-border"
+              className="card-border relative overflow-hidden group"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="card-inner p-4 sm:p-6">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3">
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-400" />
+              <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center opacity-30 group-hover:opacity-60 transition-opacity duration-500">
+                <motion.div
+                  animate={{
+                    x: [-60, 60],
+                    y: [20, -20],
+                    scale: [0.8, 1.2, 0.8],
+                    rotate: [-15, 15, -15]
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Mail className="w-24 h-24 text-indigo-500/50" />
+                </motion.div>
+              </div>
+              <div className="card-inner p-4 sm:p-6 relative z-10" style={{ backgroundColor: 'rgba(15, 15, 25, 0.6)' }}>
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mb-3">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-300" />
                 </div>
                 <h4 className="text-white font-semibold text-sm sm:text-base mb-1">Email Us</h4>
-                <p className="text-gray-400 text-xs sm:text-sm">hello@modus.io</p>
-                <p className="text-gray-500 text-[10px] sm:text-xs mt-1">We respond within 2 hours</p>
+                <p className="text-gray-300 font-medium text-xs sm:text-sm">hello@modus.io</p>
+                <p className="text-gray-400 text-[10px] sm:text-xs mt-1">We respond within 2 hours</p>
               </div>
             </motion.div>
 
             <motion.div
-              className="card-border"
+              className="card-border relative overflow-hidden group"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="card-inner p-4 sm:p-6">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-3">
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
+              <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center opacity-30 group-hover:opacity-60 transition-opacity duration-500">
+                <motion.div
+                  animate={{
+                    rotate: [0, -10, 10, -10, 10, 0, 0, 0],
+                    scale: [1, 1.1, 1.1, 1.1, 1.1, 1, 1, 1]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Phone className="w-24 h-24 text-cyan-500/50" />
+                </motion.div>
+              </div>
+              <div className="card-inner p-4 sm:p-6 relative z-10" style={{ backgroundColor: 'rgba(15, 15, 25, 0.6)' }}>
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-300" />
                 </div>
                 <h4 className="text-white font-semibold text-sm sm:text-base mb-1">Call Us</h4>
-                <p className="text-gray-400 text-xs sm:text-sm">+91 1800 123 4567</p>
-                <p className="text-gray-500 text-[10px] sm:text-xs mt-1">Mon-Fri, 9am-6pm IST</p>
+                <p className="text-gray-300 font-medium text-xs sm:text-sm">+91 1800 123 4567</p>
+                <p className="text-gray-400 text-[10px] sm:text-xs mt-1">Mon-Fri, 9am-6pm IST</p>
               </div>
             </motion.div>
 
             <motion.div
-              className="card-border"
+              className="card-border relative overflow-hidden group"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="card-inner p-4 sm:p-6">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mb-3">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.21689728471!2d88.26495034612869!3d22.535564936665796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                className="absolute inset-0 w-full h-full z-0 opacity-40 group-hover:opacity-100 transition-opacity duration-700"
+                style={{ border: 0, filter: 'grayscale(100%) contrast(120%)' }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div className="card-inner p-4 sm:p-6 relative z-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-700" style={{ backgroundColor: 'rgba(15, 15, 25, 0.6)' }}>
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center mb-3">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-purple-300" />
                 </div>
-                <h4 className="text-white font-semibold text-sm sm:text-base mb-1">Location</h4>
-                <p className="text-gray-400 text-xs sm:text-sm">Kolkata, India</p>
-                <p className="text-gray-500 text-[10px] sm:text-xs mt-1">Serving clients worldwide</p>
+                <h4 className="text-white font-semibold text-sm sm:text-base mb-1 drop-shadow-lg">Location</h4>
+                <p className="text-gray-200 font-medium text-xs sm:text-sm drop-shadow-lg">Kolkata, India</p>
+                <p className="text-gray-300 text-[10px] sm:text-xs mt-1 drop-shadow-lg">Interactive map (Hover to explore)</p>
               </div>
             </motion.div>
 
