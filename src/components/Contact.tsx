@@ -51,9 +51,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3 card-border h-full"
+            className="lg:col-span-3 card-border h-fit"
           >
-            <div className="card-inner p-5 sm:p-8 h-full flex flex-col justify-center">
+            <div className="card-inner p-5 sm:p-8">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
