@@ -272,6 +272,30 @@ html.light .to-rose-600 {
   --tw-gradient-to: #1d4ed8 !important; /* Blue-700 */
 }
 
+/* Ensure text stays white inside these newly solid blue boxes */
+html.light .from-indigo-600.text-white,
+html.light .from-indigo-500.text-white,
+html.light .from-cyan-500.text-white,
+html.light .from-cyan-600.text-white,
+html.light .from-emerald-500.text-white,
+html.light .from-emerald-600.text-white,
+html.light .from-orange-500.text-white,
+html.light .from-violet-500.text-white,
+html.light .from-violet-600.text-white,
+html.light .from-pink-500.text-white,
+html.light .from-indigo-600 .text-white,
+html.light .from-indigo-500 .text-white,
+html.light .from-cyan-500 .text-white,
+html.light .from-cyan-600 .text-white,
+html.light .from-emerald-500 .text-white,
+html.light .from-emerald-600 .text-white,
+html.light .from-orange-500 .text-white,
+html.light .from-violet-500 .text-white,
+html.light .from-violet-600 .text-white,
+html.light .from-pink-500 .text-white {
+  color: #ffffff !important;
+}
+
 /* Specific hover states for primary buttons */
 html.light .hover\:from-indigo-500:hover {
   --tw-gradient-from: #1d4ed8 !important; /* Blue-700 */
