@@ -176,7 +176,11 @@ html.light .active\:bg-white\/15:active {
 html.light .bg-black\/30 { background-color: rgba(255, 255, 255, 0.4) !important; }
 html.light .bg-black\/40 { background-color: rgba(255, 255, 255, 0.5) !important; }
 html.light .bg-black\/50 { background-color: rgba(255, 255, 255, 0.6) !important; }
-html.light .bg-black\/70 { background-color: rgba(255, 255, 255, 0.85) !important; }
+html.light .bg-black\/70 { 
+  background-color: rgba(255, 255, 255, 0.65) !important; 
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
 html.light .bg-black\/95 { background-color: rgba(255, 255, 255, 0.95) !important; }
 
 /* Navbar text specifically in light mode */
