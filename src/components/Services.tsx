@@ -104,11 +104,11 @@ export default function Services() {
               onMouseEnter={() => setActiveService(i)}
               onMouseLeave={() => setActiveService(null)}
               onTouchStart={() => setActiveService(i)}
-              className={`group relative cursor-pointer transition-all duration-500 ${
+              className={`group relative cursor-pointer transition-all duration-500 h-full ${
                 activeService === i ? "scale-[1.02] z-10" : ""
               }`}
             >
-              <div className="card-border">
+              <div className="card-border h-full">
                 <div className="card-inner p-4 sm:p-6 h-full flex flex-col">
                   {/* Icon */}
                   <div
