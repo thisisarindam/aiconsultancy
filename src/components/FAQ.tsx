@@ -34,7 +34,7 @@ const faqs = [
       "Absolutely. We offer a 100% ROI guarantee: if our automation doesn't pay for itself within 6 months of deployment, we'll work with you at no additional cost until it does — or refund the difference. We're that confident in our work. Our average client sees a 5-10x return within the first year.",
   },
   {
-    question: "How is AIQON different from hiring a traditional consultant?",
+    question: "How is AXIOM different from hiring a traditional consultant?",
     answer:
       "Traditional consultants charge ₹5,000-15,000/hour for analysis alone and often deliver slide decks without implementation. We charge a one-time project fee that includes discovery, building, deployment, AND training — all at roughly 40-60% less than a traditional consulting engagement. Plus, you get working automation, not just recommendations.",
   },

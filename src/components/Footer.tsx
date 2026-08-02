@@ -14,14 +14,17 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
+            <a href="#" className="flex items-center mb-4">
               <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold tracking-tight">
-                <span className="text-white">AI</span>
-                <span className="gradient-text">QON</span>
-              </span>
+              <div className="flex flex-col ml-3">
+                <span className="text-xl font-bold tracking-wider leading-none">
+                  <span className="text-white">AX</span>
+                  <span className="gradient-text">IOM</span>
+                </span>
+                <span className="text-[10px] text-gray-400 tracking-[0.2em] uppercase mt-0.5">intelligence, distilled.</span>
+              </div>
             </a>
             <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 max-w-xs">
               Transforming businesses through intelligent AI automation. We find bottlenecks, build solutions, and train teams — all at a fraction of traditional consulting costs.
@@ -67,7 +70,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-gray-600 text-[10px] sm:text-xs">
-            &copy; {new Date().getFullYear()} AIQON. All rights reserved. Built with ❤️ for businesses ready to automate.
+            &copy; {new Date().getFullYear()} AXIOM. All rights reserved. Built with ❤️ for businesses ready to automate.
           </p>
           <p className="text-gray-600 text-[10px] sm:text-xs">
             Made in Bengaluru, India • Serving clients worldwide

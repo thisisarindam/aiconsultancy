@@ -45,17 +45,20 @@ export default function Navbar() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="flex items-center gap-2 group"
+            className="flex items-center group"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-indigo-500/40 transition-all duration-300">
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </div>
-            <span className="text-lg sm:text-xl font-bold tracking-tight">
-              <span className="text-white">AI</span>
-              <span className="gradient-text">QON</span>
-            </span>
+            <div className="flex flex-col ml-3">
+              <span className="text-xl font-bold tracking-wider leading-none">
+                <span className="text-white">AX</span>
+                <span className="gradient-text">IOM</span>
+              </span>
+              <span className="text-[10px] text-gray-400 tracking-[0.2em] uppercase mt-0.5">intelligence, distilled.</span>
+            </div>
           </motion.a>
 
           {/* Desktop links */}

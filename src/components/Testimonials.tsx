@@ -7,7 +7,7 @@ const testimonials = [
     name: "Sarah Chen",
     role: "COO, Meridian Health Group",
     content:
-      "AIQON identified 4 bottlenecks we didn't even know we had. Their invoice automation alone saves us 22 hours a week. The team training was so thorough, our staff adopted it within days. Best investment we made this year.",
+      "AXIOM identified 4 bottlenecks we didn't even know we had. Their invoice automation alone saves us 22 hours a week. The team training was so thorough, our staff adopted it within days. Best investment we made this year.",
     rating: 5,
     savings: "₹32,00,000/year saved",
     avatar: "SC",
@@ -17,7 +17,7 @@ const testimonials = [
     name: "Marcus Rodriguez",
     role: "Founder, Elevate Digital Agency",
     content:
-      "We were drowning in client reporting — every Friday was a nightmare. AIQON built an automated reporting pipeline that pulls data from 6 platforms and generates beautiful client-ready reports. We got back 30+ hours a month.",
+      "We were drowning in client reporting — every Friday was a nightmare. AXIOM built an automated reporting pipeline that pulls data from 6 platforms and generates beautiful client-ready reports. We got back 30+ hours a month.",
     rating: 5,
     savings: "₹20,00,000/year saved",
     avatar: "MR",
@@ -37,7 +37,7 @@ const testimonials = [
     name: "Arjun Mehta",
     role: "CTO, NovaFin Solutions India",
     content:
-      "As a fintech company, we needed automation that was both powerful and compliant with RBI guidelines. AIQON's team understood our regulatory requirements and built workflows that reduced our expense processing time by 80% while maintaining full audit trails.",
+      "As a fintech company, we needed automation that was both powerful and compliant with RBI guidelines. AXIOM's team understood our regulatory requirements and built workflows that reduced our expense processing time by 80% while maintaining full audit trails.",
     rating: 5,
     savings: "₹38,00,000/year saved",
     avatar: "AM",
@@ -47,7 +47,7 @@ const testimonials = [
     name: "Lisa Thompson",
     role: "HR Director, Pacific Retail Group",
     content:
-      "Employee onboarding used to take 2 weeks of back-and-forth. AIQON automated the entire thing — from offer letters to IT setup to training schedules. New hires now go from signed offer to productive in 3 days. Incredible.",
+      "Employee onboarding used to take 2 weeks of back-and-forth. AXIOM automated the entire thing — from offer letters to IT setup to training schedules. New hires now go from signed offer to productive in 3 days. Incredible.",
     rating: 5,
     savings: "₹26,00,000/year saved",
     avatar: "LT",
