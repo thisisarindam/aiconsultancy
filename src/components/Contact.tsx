@@ -52,9 +52,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3 card-border h-fit"
+            className="lg:col-span-3 card-border lg:h-full"
           >
-            <div className="card-inner p-5 sm:p-8">
+            <div className="card-inner p-5 sm:p-8 h-full flex flex-col">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -81,7 +81,7 @@ export default function Contact() {
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 flex-grow flex flex-col justify-between">
                   <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
                     <div>
                       <label className="block text-xs sm:text-sm text-gray-400 mb-2">Full Name *</label>
@@ -166,7 +166,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-2 space-y-3 sm:space-y-4"
+            className="lg:col-span-2 flex flex-col gap-3 sm:gap-4 lg:h-full lg:justify-between"
           >
             <motion.div
               className="card-border"
