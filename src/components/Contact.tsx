@@ -177,7 +177,7 @@ export default function Contact() {
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-400" />
                 </div>
                 <h4 className="text-white font-semibold text-sm sm:text-base mb-1">Email Us</h4>
-                <p className="text-gray-400 text-xs sm:text-sm">hello@axiom.io</p>
+                <p className="text-gray-400 text-xs sm:text-sm">hello@modus.io</p>
                 <p className="text-gray-500 text-[10px] sm:text-xs mt-1">We respond within 2 hours</p>
               </div>
             </motion.div>
