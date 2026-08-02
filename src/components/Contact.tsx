@@ -166,7 +166,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-2 space-y-3 sm:space-y-4 lg:space-y-0 lg:h-full lg:flex lg:flex-col lg:justify-between"
+            className="lg:col-span-2 space-y-3 sm:space-y-4"
           >
             <motion.div
               className="card-border"
