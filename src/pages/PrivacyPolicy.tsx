@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
           <p>
             If you have any questions or concerns about this Privacy Policy or our data handling practices, please contact us at: <br/>
             <strong>Email:</strong> hello@modus.io <br/>
-            <strong>Location:</strong> Bengaluru, India
+            <strong>Location:</strong> Kolkata, India
           </p>
         </motion.div>
       </div>

@@ -70,7 +70,7 @@ export default function TermsOfService() {
 
           <h2>8. Governing Law</h2>
           <p>
-            These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Bengaluru, Karnataka.
+            These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Kolkata, West Bengal.
           </p>
 
           <h2>9. Contact Information</h2>

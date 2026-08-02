@@ -205,7 +205,7 @@ export default function Contact() {
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
                 </div>
                 <h4 className="text-white font-semibold text-sm sm:text-base mb-1">Location</h4>
-                <p className="text-gray-400 text-xs sm:text-sm">Bengaluru, India</p>
+                <p className="text-gray-400 text-xs sm:text-sm">Kolkata, India</p>
                 <p className="text-gray-500 text-[10px] sm:text-xs mt-1">Serving clients worldwide</p>
               </div>
             </motion.div>

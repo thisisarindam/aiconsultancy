@@ -98,10 +98,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-gray-600 text-[10px] sm:text-xs">
-            &copy; {new Date().getFullYear()} MODUS. All rights reserved. Built with ❤️ for businesses ready to automate.
+            &copy; {new Date().getFullYear()} MODUS. All rights reserved. Built with ❤️ for businesses ready to automate. By Arindam Maity
           </p>
           <p className="text-gray-600 text-[10px] sm:text-xs">
-            Made in Bengaluru, India • Serving clients worldwide
+            Made in Kolkata, India • Serving clients worldwide
           </p>
         </div>
       </div>
