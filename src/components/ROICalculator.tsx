@@ -62,9 +62,9 @@ export default function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="card-border h-fit"
+            className="card-border lg:h-full"
           >
-            <div className="card-inner p-5 sm:p-8 space-y-6 sm:space-y-7">
+            <div className="card-inner p-5 sm:p-8 h-full flex flex-col justify-between space-y-6 lg:space-y-0">
               {/* Employees */}
               <div>
                 <div className="flex justify-between mb-2">
@@ -156,7 +156,7 @@ export default function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-3 sm:space-y-4"
+            className="space-y-3 sm:space-y-4 lg:space-y-0 lg:h-full lg:flex lg:flex-col lg:justify-between"
           >
             {/* Annual Savings */}
             <motion.div
@@ -227,18 +227,26 @@ export default function ROICalculator() {
                 </p>
               </div>
             </motion.div>
-
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-              className="flex items-center justify-center gap-2 w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold text-sm sm:text-base hover:from-indigo-500 hover:to-cyan-400 transition-all duration-300 shadow-lg shadow-indigo-500/30 active:shadow-indigo-500/20"
-            >
-              Lock In These Savings
-              <ArrowRight className="w-5 h-5" />
-            </motion.a>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-10 sm:mt-14 flex justify-center"
+        >
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex items-center justify-center gap-2 px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold text-sm sm:text-base hover:from-indigo-500 hover:to-cyan-400 transition-all duration-300 shadow-lg shadow-indigo-500/30 active:shadow-indigo-500/20"
+          >
+            Lock In These Savings
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
