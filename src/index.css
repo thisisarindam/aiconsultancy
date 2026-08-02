@@ -235,3 +235,84 @@ html.light .grid-pattern {
 html.light ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
+
+/* =========================================
+   PROFESSIONAL COLOR MAPPINGS (Light Mode)
+   Overrides the vibrant funky gradients
+   with a sleek Corporate Blue theme
+   ========================================= */
+
+/* Replace all gradient start colors with Blue-600 */
+html.light .from-indigo-600,
+html.light .from-indigo-500,
+html.light .from-cyan-500,
+html.light .from-cyan-600,
+html.light .from-emerald-500,
+html.light .from-emerald-600,
+html.light .from-orange-500,
+html.light .from-violet-500,
+html.light .from-violet-600,
+html.light .from-pink-500 {
+  --tw-gradient-from: #2563eb !important; /* Blue-600 */
+}
+
+/* Replace all gradient end colors with Blue-700 */
+html.light .to-cyan-500,
+html.light .to-cyan-400,
+html.light .to-purple-500,
+html.light .to-purple-600,
+html.light .to-blue-500,
+html.light .to-blue-600,
+html.light .to-teal-500,
+html.light .to-teal-600,
+html.light .to-red-500,
+html.light .to-fuchsia-500,
+html.light .to-fuchsia-600,
+html.light .to-rose-600 {
+  --tw-gradient-to: #1d4ed8 !important; /* Blue-700 */
+}
+
+/* Specific hover states for primary buttons */
+html.light .hover\:from-indigo-500:hover {
+  --tw-gradient-from: #1d4ed8 !important; /* Blue-700 */
+}
+html.light .hover\:to-cyan-400:hover {
+  --tw-gradient-to: #1e40af !important; /* Blue-800 */
+}
+
+/* Override gradient text (like headings) to a solid authoritative blue */
+html.light .gradient-text {
+  background: none !important;
+  color: #1e40af !important; /* Blue-800 */
+  -webkit-text-fill-color: #1e40af !important;
+}
+
+/* Neutralize the neon glow shadows */
+html.light .glow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+html.light .glow-cyan {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03) !important;
+}
+html.light .glow-text {
+  text-shadow: none !important;
+}
+
+/* Refine button drop-shadows to professional blue shadows instead of cyan/indigo */
+html.light .shadow-indigo-500\/30,
+html.light .shadow-indigo-500\/25,
+html.light .group-hover\:shadow-indigo-500\/40:hover,
+html.light .hover\:shadow-indigo-500\/50:hover {
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Neutralize the pink success pills (if used anywhere) */
+html.light .text-pink-400 {
+  color: #2563eb !important; /* Blue-600 */
+}
+html.light .bg-pink-500\/5 {
+  background-color: rgba(37, 99, 235, 0.05) !important;
+}
+html.light .border-pink-500\/20 {
+  border-color: rgba(37, 99, 235, 0.2) !important;
+}
