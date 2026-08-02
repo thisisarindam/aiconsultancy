@@ -34,10 +34,10 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-black/70 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-indigo-500/5"
-          : "bg-transparent"
+          ? "bg-black/70 backdrop-blur-xl border-white/5 shadow-lg shadow-indigo-500/5"
+          : "bg-transparent border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
