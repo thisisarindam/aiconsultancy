@@ -35,11 +35,12 @@ export default function ThemeToggle() {
       localStorage.setItem("theme", "dark");
     }
 
-    // add a slightly longer-lived class to trigger a smooth page animation
-    document.documentElement.classList.add("theme-anim");
+    // trigger sunrise or sunset animation on the document
+    const animClass = theme === "dark" ? "theme-sunrise" : "theme-sunset";
+    document.documentElement.classList.add(animClass);
     window.setTimeout(() => {
-      document.documentElement.classList.remove("theme-anim");
-    }, 1000);
+      document.documentElement.classList.remove(animClass);
+    }, 1400);
   };
 
   return (
