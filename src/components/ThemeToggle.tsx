@@ -18,18 +18,13 @@ export default function ThemeToggle() {
   }, []);
 
   const toggleTheme = (e?: React.MouseEvent<HTMLButtonElement>) => {
-    // optional click position for a small page flash
+    // capture click position for the subtle flash
     if (e && e.clientX && e.clientY) {
       document.documentElement.style.setProperty("--theme-x", `${e.clientX}px`);
       document.documentElement.style.setProperty("--theme-y", `${e.clientY}px`);
     }
 
-    // add a short-lived class to trigger the page animation
-    document.documentElement.classList.add("theme-anim");
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("theme-anim");
-    }, 600);
-
+    // toggle theme first so the transition animates between states
     if (theme === "dark") {
       setTheme("light");
       document.documentElement.classList.add("light");
@@ -39,6 +34,12 @@ export default function ThemeToggle() {
       document.documentElement.classList.remove("light");
       localStorage.setItem("theme", "dark");
     }
+
+    // add a slightly longer-lived class to trigger a smooth page animation
+    document.documentElement.classList.add("theme-anim");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("theme-anim");
+    }, 1000);
   };
 
   return (
