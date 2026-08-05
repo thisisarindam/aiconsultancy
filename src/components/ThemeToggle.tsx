@@ -17,7 +17,19 @@ export default function ThemeToggle() {
     }
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = (e?: React.MouseEvent<HTMLButtonElement>) => {
+    // optional click position for a small page flash
+    if (e && e.clientX && e.clientY) {
+      document.documentElement.style.setProperty("--theme-x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--theme-y", `${e.clientY}px`);
+    }
+
+    // add a short-lived class to trigger the page animation
+    document.documentElement.classList.add("theme-anim");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("theme-anim");
+    }, 600);
+
     if (theme === "dark") {
       setTheme("light");
       document.documentElement.classList.add("light");
@@ -35,7 +47,7 @@ export default function ThemeToggle() {
       animate={{ scale: 1 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      onClick={toggleTheme}
+      onClick={(e) => toggleTheme(e)}
       className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-indigo-600/90 text-white shadow-lg shadow-indigo-500/30 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-indigo-500 transition-colors"
       aria-label="Toggle Theme"
     >
